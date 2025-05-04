@@ -1,4 +1,13 @@
 @import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
+@font-face{
+	font-family: "Inter";
+	src: url(/assets/Inter-VariableFont_opsz,wght.woff2) format("woff2");
+	font-style: normal;
+	font-weight: 100 700;
+	font-display: swap;
+}
 
 @theme {
 	/* Colores */
@@ -9,8 +18,27 @@
 
 	/* Breakpoints */
 	--breakpoint-xs: 350px;
+
+	/* Fuente */
+	--font-sans: "Inter", system-ui, sans-serif;
 }
 
 .social-button {
 	@apply p-2 size-10 xs:size-12 flex items-center justify-center rounded-full hover:scale-110 transition-transform;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 8px;
+	background-color: #e7e7e7;
+	border: 1px solid #cacaca;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	background-color: #b0b0b0; /* Add a color for the thumb */
 }
